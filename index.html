@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="jp">
+<head>
+  <title>Fragments of Eternity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SAOをインスパイアしつくった広大な世界で遊べるMinecraftのRPGサーバー、Fragments of Eternityの公式ホームページ。">
+  <meta name="keywords" content="Fragments of Eternity, minecraft"/>
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors, and @nezuu2">
+  <meta name="generator" content="Hugo 0.79.0">
+
+  <link rel="icon" type="Images/server_icon.png" href="server_icon.png">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="Library/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
+  <!-- Bootstrap-icons CSS -->
+  <link rel="stylesheet" href="Library/icons-1.5.0/font/bootstrap-icons.css">
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
+
+  <style>{
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .news-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 20px auto;
+      gap: 20px;
+    }
+    .main-news {
+      flex: 1.5;
+      background: #f9f9f9;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .main-news img {
+      width: 100%;
+      height: auto;
+    }
+    .main-news .content {
+      padding: 20px;
+    }
+    .main-news .content h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+    .main-news .content p {
+      color: #666;
+      line-height: 1.6;
+    }
+    .side-news {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .side-news .news-item {
+      display: flex;
+      gap: 10px;
+      background: #f1f1f1;
+      padding: 10px;
+      border-radius: 8px;
+      align-items: center;
+    }
+    .side-news .news-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .side-news .news-item .info {
+      flex: 1;
+    }
+    .side-news .news-item .info h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+    }
+    .side-news .news-item .info p {
+      margin: 0;
+      font-size: 12px;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+  .news-container {
+    flex-direction: column;
+  }
+
+  .main-news {
+    order: -1; /* 一番上に表示 */
+  }
+
+  .sub-news {
+    flex-direction: column; /* 縦並び */
+  }
+
+  .sub-news-item img {
+    width: 100%; /* スマホ画面幅に適応 */
+    height: auto;
+  }
+}
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="Images/server_icon.png" width="12%"> Fragments of Eternity　</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">ホーム</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="https://discord.gg/nv3WhPDXDB">Discord</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/dragonkrpg1" tabindex="-1">Twitter</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="story.html">ストーリー</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creator.html">製作者</a>
+          </li>
+        </ul>
+        <li class="nav-item text-success" id="ver">Java版 version 1.20.1  </li>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="サイト内検索" aria-label="サイト内検索">
+          <button class="btn btn-outline-success" type="submit">search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="bd-placeholder-img" src="Images/hajimari.png">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>新感覚RPG、Fragments of Eternity RPG!</h1>
+            <p>さあ、あなたもこの広大なワールドへ冒険に出かけよう！
+              <br>Fragments of Eternity RPGには、豊富なアイテム、武器、防具、イベント、ギミック、ボスなどがいます。
+            </p>
+            <p><button type="button" class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#serverModal" role="button">サーバーに参加する</button></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img" src="Images/torihiki.png">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1><a style="
+              color:rgb(255, 255, 255);
+              text-shadow:2px 2px 0 #666, -2px -2px 0 #666,
+              -2px 2px 0 #666, 2px -2px 0 #666,
+              0px 2px 0 #666,  0-2px 0 #666,
+              -2px 0 0 #666, 2px 0 0 #666;">今なら！</a><a style="
+              color:rgb(16, 133, 55);
+              text-shadow:2px 2px 0 #FFF, -2px -2px 0 #FFF,
+              -2px 2px 0 #FFF, 2px -2px 0 #FFF,
+              0px 2px 0 #FFF,  0-2px 0 #FFF,
+              -2px 0 0 #FFF, 2px 0 0 #FFF;font-weight:bold;">事前登録</a><a style="
+              color:rgb(255, 255, 255);
+              text-shadow:2px 2px 0 #666, -2px -2px 0 #666,
+              -2px 2px 0 #666, 2px -2px 0 #666,
+              0px 2px 0 #666,  0-2px 0 #666,
+              -2px 0 0 #666, 2px 0 0 #666;">で特別なアイテムが手に入ります!</a></h1>
+            <p>ぜひ事前登録しよう!</p>
+            <p><a class="btn btn-lg btn-success" href="#" data-bs-toggle="modal" data-bs-target="#preregistrationModal" role="button">事前登録する</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img" src="Images/castle.png">
+          
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>ラズパイで動く<a style="background:linear-gradient(transparent 70%, #FFFF00 0%);">”軽い?”</a>サーバー！</h1>
+            <p>他では味わえないラズパイでできた軽いサーバーです。<br>経費があまりかかってないので気軽に運営できています。</p>
+            <p><a class="btn btn-lg btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#serverModal" role="button">今すぐ遊ぶ！</a> <a class="btn btn-lg btn-outline-primary" href="creator.html" role="button">開発者について知る</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="serverModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Q. サーバーに入るには?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-success" role="alert">
+          <h6 class="alert-heading">Discordサーバーを参考にMinecraftにログインすると入れます。</h5>
+          <hr>
+          <a id="discord" href="#"></a>
+          <br>
+          <br>※事前登録をすると特別なアイテムがもらえます!
+          <br>よければアカウントも作成してくださいね★。
+          <br><a id="password"></a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="preregistrationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">事前登録</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-3 mb-2 bg-success text-white">
+          こちらのパスワードをMinecraft内で入力してください：
+          <br><a id="password2">----</a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+<div class="news-container">
+    <!-- メインニュース -->
+    <div class="main-news">
+      <img src="Images/hajimari2.png" alt="メインニュース" style="height:330px;">
+      <div class="content">
+        <h2>『Fragments of Eternity』の世界へようこそ!!</h2>
+        <p>私が創り上げたこの世界は、無限の美と可能性を秘めています。<br>此度は"この私イリアスが直々に"、この箱庭のことについてお話しいたしましょう。</p>
+      </div>
+    </div>
+
+    <!-- サイドニュース -->
+    <div class="side-news">
+      <div class="news-item">
+        <img src="Images/server_icon.png" alt="ニュース1">
+        <div class="info">
+          <h3>『Fragments of Eternity』本日正式サービス開始まであと...</h3>
+          <p>ごめんなさい！<br>まだ未定です！</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="Images/news2.jpg" alt="ニュース2">
+        <div class="info">
+          <h3>ニュース2のタイトル</h3>
+          <p>簡単な説明</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="Images/news3.jpg" alt="ニュース3">
+        <div class="info">
+          <h3>ニュース3のタイトル</h3>
+          <p>簡単な説明</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="Images/news4.jpg" alt="ニュース4">
+        <div class="info">
+          <h3>ニュース4のタイトル</h3>
+          <p>簡単な説明</p>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="Images/news5.jpg" alt="ニュース5">
+        <div class="info">
+          <h3>ニュース5のタイトル</h3>
+          <p>簡単な説明</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container marketing">
+
+    <div calss="row featurette">
+      <h2><a style="font-size:1.2em">現在製作中!</a>｜完成まであと94% <span class="text-muted" style="font-size:0.7em">( 25層まで製作予定 )</span></h2>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 6%">6%</div>
+      </div>
+      <h4>ストーリーごと<a style="background:linear-gradient(transparent 70%, #ffff00dc 0%);">リニューアル中</a>です。</h4>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              各層について見る
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <button class="btn" href="screenshots.html" style="background:url('Images/1so.png');width:100%;height:110px;color:white;background-position:center;margin-bottom:5px">1層</button>
+            <button class="btn" style="background:url('Images/2so.png');width:100%;height:110px;color:white;background-position:center;margin-bottom:5px">2層</button>
+            <button class="btn" style="background:url('Images/3so.png');width:100%;height:110px;color:white;background-position:center;margin-bottom:5px">3層</button>
+            <button class="btn btn-secondary disabled" style="width:100%;height:110px;color:white;background-position:center;margin-bottom:5px">･･･25層</button>
+          </div>
+        </div>
+      </div>
+      <br><h2 class="fw-bold">制作モチベーション</h2>
+      <div class="progress">
+        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated text-dark" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 76%">76%</div>
+      </div>
+    </div>
+    <br>
+
+    <!-- 動画ボタンとモーダルを移動 -->
+    <div class="text-center">
+      <button class="btn slice" data-bs-toggle="modal" data-bs-target="#videoModal"><img src="Images/PV.png" width=43%; style="border-radius:8%;"></button>
+      <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title fst-italic" id="videoModal">PV動画</h5>
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+           </div>
+           <div class="modal-body">
+             <div class="embed-responsive embed-responsive-16by9">
+             <iframe width="560" height="315" src="https://youtu.be/ZkuqyKijJC0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 公開予定 -->
+    <div class="text-center">
+      <h3 style="font-style:italic;font-size:2em;padding:1em;">──　βサーバーにて公開予定!　──</h3>
+      <div class="card">
+        <div class="card-header">
+          サーバー情報
+        </div>
+        <div class="card-body">
+          IP ~~:25580, ver 1.18.2
+        </div>
+      </div>
+    </div>
+
+    <!-- START THE FEATURETTES -->
+  
+
+     <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">SAOをインスパイアして創作した<br>世界があなたを待っている…!</h2>
+        <p class="lead">
+          <br>Fragments of Eternityには豊富な武器や防具、ダンジョン、イベントなど
+          <br>数多くの要素があり、いろんな楽しみ方ができます。
+          <br>
+          <br>オンラインゲームならではのイベント要素でプレイヤーさんとつながったり
+          <br>あえて困難なソロプレイをしてみたり? みんなで初期装備縛りをして遊んだりなど、
+          <br>工夫次第でいろんな遊びができちゃいます!
+          <br>
+          <br>そしてもしゲーム要素が足りなくなったときは!
+          <br>なんとDiscordサーバーに言いに行くと運営さんがアップデートしてくれます!。
+          <br>これで絶えず無限に遊びを堪能できますね★
+          <br>
+          <br>さあ！あなただけの遊び方をみつけに行こう!  <a style="color:red">[ Return the game! ]</a>
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="Images/firld_2.png" role="img">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">広大な世界とフィールド<br><span class="text-muted">A vast world and fields</span></h2>
+        <p class="lead">あらゆるダンジョンや街がこの世界には散りばめられている!
+          <br>どの順番でみつけどのように攻略するかはあなた次第!。
+          <br>おまけになんと自分好みの家まで建てられるとか!?
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="Images/firld_1.png" role="img">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">強力な敵との白熱の戦い!!<br><span class="text-muted" style="font-size:2rem;">A heated battle against a powerful enemy!</span></h2>
+        <p class="lead">マップ上にはザコ敵から強敵までいろんなモンスターが生息しています。
+        <br>武器や防具、スキル、回復アイテムを駆使してたたかおう!
+        <br>プレイヤーはレベルアップすると合計三枠のスキルスロットが使えるようになります。
+        <br>レベル上げや戦利品かせぎをして素敵なスキルやアイテムを手に入れよう！。
+        <br>
+        <br>スキルの数はなんと100種類以上！？
+        <br>(???) さあ君ならではの戦闘スタイルと冒険スタイルをみせてくれ! (そして魔王城で会おう…)
+        <br>ザザ、ザーザーザーザザッザ…
+        <br>
+        <br>あれ？おっかしいな…電波が… あ!もどったもどった! ってどうかしました？</p>
+      </div>
+      <div class="col-md-5">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="Images/boss.png" role="img">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
+    
+  </div><!-- /.container -->
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">⇧ページのはじめに戻る</a></p>
+    <p>&copy; 2021 @nezuu2. &middot; <a href="#" data-bs-toggle="modal" data-bs-target="#gameModal"><s>ルール</s></a> &middot; <a href="#privacy" data-bs-toggle="modal" data-bs-target="#privacyModal">プライバシーポリシー</a></p>
+    <p>使用したフレームワーク：Bootstrap<br>フレームワークの作者：Mark Otto, Jacob Thornton, と Bootstrapの貢献者</p>
+    
+    <!-- gameModal -->
+    <div class="modal fade" id="gameModal" tabindex="-1" aria-labelledby="gameModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gameModalLabel">Q. ゲームルール</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            最新のルールは、こちらのDiscordサーバーからご確認いただけます。
+            <br><a id="discord2" href="#"></a>
+            <p></p>
+            <img src="Images/ルールのスクショ.png" alt="ゲームルール">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- privacyModal -->
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="privacyModalLabel"><a style="color:darkgreen;">✔</a> プライバシーポリシー　<a class="fs-6 text-decoration-none"><i class="bi bi-clock-history" style="padding-right:5px"></i>2022/01/19</a></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>以下本文にある「取得した情報」とは、閲覧情報などを示します。
+            <br>また、メールアドレスなどの情報はアカウントのセキュリティ向上に役立ちます。</p>
+            <p>ご同意いただいた場合、取得した情報は閲覧数向上などの運営行為に利用させていただきます。</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="successAlert()">同意する</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Alert(javascript) -->
+    <script>
+      function successAlert(){
+        alert("✔ プライバシーポリシーへの同意を確認しました\n🙇ご同意くださりありがとうございます。");
+      }
+    </script>
+  </footer>
+</main>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+    <!--Glottologist JS (多言語対応のやつ)-->
+    <script src="https://unpkg.com/glottologist"></script>
+  </body>
+</html>
